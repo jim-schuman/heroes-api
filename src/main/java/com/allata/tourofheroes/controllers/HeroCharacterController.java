@@ -31,4 +31,9 @@ public class HeroCharacterController {
         return characterRepo.save(heroCharacter);
     }
 
+    @DeleteMapping(value = "/{id}")
+    public void delete(@PathVariable Long id) {
+        characterRepo.deleteById(id);
+    }
+
 }
